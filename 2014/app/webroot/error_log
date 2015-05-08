@@ -1,0 +1,33 @@
+[12-Aug-2014 09:51:51] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 45465601 bytes) in /home2/stavrovi/public_html/2014/app/View/Layouts/main.ctp on line 53
+[12-Aug-2014 09:52:43] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 45465601 bytes) in /home2/stavrovi/public_html/2014/app/View/Layouts/main.ctp on line 53
+[12-Aug-2014 09:52:43] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 45465601 bytes) in /home2/stavrovi/public_html/2014/app/View/Layouts/main.ctp on line 53
+[12-Aug-2014 09:52:57] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 45465601 bytes) in /home2/stavrovi/public_html/2014/app/View/Layouts/main.ctp on line 53
+[12-Aug-2014 09:53:34] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 45465601 bytes) in /home2/stavrovi/public_html/2014/app/View/Layouts/main.ctp on line 53
+[12-Aug-2014 09:55:41] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 45465601 bytes) in /home2/stavrovi/public_html/2014/app/View/Layouts/main.ctp on line 53
+[13-Aug-2014 20:41:55] PHP Parse error:  syntax error, unexpected ';', expecting T_FUNCTION in /home2/stavrovi/public_html/2014/app/Model/Gb.php on line 15
+[19-Dec-2014 14:32:35] PHP Fatal error:  Call to a member function set() on a non-object in /home2/stavrovi/public_html/2014/app/Controller/UsersController.php on line 38
+[19-Dec-2014 14:38:12] PHP Fatal error:  Call to a member function set() on a non-object in /home2/stavrovi/public_html/2014/app/Controller/UsersController.php on line 38
+[19-Dec-2014 15:11:03] PHP Parse error:  syntax error, unexpected '{' in /home2/stavrovi/public_html/2014/app/View/Layouts/admin.ctp on line 115
+[19-Dec-2014 15:41:20] PHP Fatal error:  Call to a member function getVimeVideo() on a non-object in /home2/stavrovi/public_html/2014/app/Controller/VideosController.php on line 17
+[19-Dec-2014 15:41:51] PHP Fatal error:  Class 'phpVimeo' not found in /home2/stavrovi/public_html/2014/app/Model/Video.php on line 46
+[19-Dec-2014 15:50:16] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/View/Videos/admin_index.ctp on line 25
+[19-Dec-2014 15:50:19] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/View/Videos/admin_index.ctp on line 25
+[19-Dec-2014 15:52:59] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/View/Videos/admin_index.ctp on line 25
+[19-Dec-2014 15:53:08] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/View/Videos/admin_index.ctp on line 25
+[19-Dec-2014 15:54:30] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/View/Videos/admin_index.ctp on line 22
+[19-Dec-2014 15:59:59] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/Model/Video.php on line 56
+[19-Dec-2014 16:00:17] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/Model/Video.php on line 57
+[19-Dec-2014 16:00:19] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/Model/Video.php on line 57
+[19-Dec-2014 16:32:00] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 31332280 bytes) in /home2/stavrovi/public_html/2014/lib/Cake/View/View.php on line 951
+[19-Dec-2014 17:51:02] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home2/stavrovi/public_html/2014/app/View/Videos/admin_get_video_ajax.ctp on line 1
+[19-Dec-2014 17:51:17] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home2/stavrovi/public_html/2014/app/View/Videos/admin_get_video_ajax.ctp on line 1
+[19-Dec-2014 17:52:32] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home2/stavrovi/public_html/2014/app/View/Videos/admin_get_video_ajax.ctp on line 2
+[19-Dec-2014 19:11:28] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home2/stavrovi/public_html/2014/app/Model/Video.php on line 87
+[20-Dec-2014 12:09:08] PHP Fatal error:  Call to undefined method ContactsController::save() in /home2/stavrovi/public_html/2014/app/Controller/ContactsController.php on line 18
+[20-Dec-2014 12:11:18] PHP Fatal error:  Call to undefined method ContactsController::save() in /home2/stavrovi/public_html/2014/app/Controller/ContactsController.php on line 18
+[20-Dec-2014 23:48:31] PHP Fatal error:  Call to a member function save() on a non-object in /home2/stavrovi/public_html/2014/app/Controller/GbController.php on line 18
+[21-Dec-2014 00:58:17] PHP Fatal error:  Call to a member function getVimeVideo() on a non-object in /home2/stavrovi/public_html/2014/app/Controller/ContactsController.php on line 35
+[21-Dec-2014 00:59:20] PHP Parse error:  syntax error, unexpected ')' in /home2/stavrovi/public_html/2014/app/Controller/ContactsController.php on line 35
+[21-Dec-2014 07:35:22] PHP Parse error:  syntax error, unexpected T_ELSE in /home2/stavrovi/public_html/2014/app/View/Gb/admin_index.ctp on line 53
+[30-Apr-2015 10:02:18] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/View/Elements/video.ctp on line 18
+[05-May-2015 02:57:39] PHP Fatal error:  Class 'phpVimeo' not found in /home2/stavrovi/public_html/2014/app/Model/Video.php on line 49
