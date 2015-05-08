@@ -43,7 +43,6 @@
 		=============================================== -->
 		<?php
 			  echo $this->Html->script('jquery.min');
-			  echo $this->Html->script('search');
 		?>
 
 
