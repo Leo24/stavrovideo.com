@@ -520,7 +520,7 @@ $(document).ready(function() {
 						'</div>'+
 						'</a>'+
 						'<div class="sr-only">'+
-						'<div class="project-media" data-video=\'<iframe src="http://player.vimeo.com/video/'+video.video_id+'?autoplay=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\'></div>'+
+						'<div class="project-media" data-video=\'<iframe src="http://player.vimeo.com/video/'+video.video_id+'?autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\'></div>'+
 						'</div>'+
 						'</article>';
 

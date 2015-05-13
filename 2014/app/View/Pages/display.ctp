@@ -105,7 +105,7 @@
 												}
 												?>
                                                 
-                                                <iframe id="start_here_frame" src="http://player.vimeo.com/video<?=$video_url['path']?>?autoplay=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                                <iframe id="start_here_frame" src="http://player.vimeo.com/video<?=$video_url['path']?>?autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                                
                                         </div>
 					

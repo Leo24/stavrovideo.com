@@ -23,7 +23,7 @@
 <!--                        <span class="video-url" style="display:none;" video-url="--><?php //echo $searchResult['video_url']?><!--">--><?php //echo $searchResult['video_url']?><!--</span>-->
 
                         <div class="sr-only">
-                            <div class="project-media" data-video='<iframe src="http://player.vimeo.com/video/<?php echo $searchResult['video_id']?>?autoplay=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'></div>
+                            <div class="project-media" data-video='<iframe src="http://player.vimeo.com/video/<?php echo $searchResult['video_id']?>?autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'></div>
                         </div>
 
 
