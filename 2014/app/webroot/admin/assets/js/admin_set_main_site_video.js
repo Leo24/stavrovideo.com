@@ -6,7 +6,7 @@ $(document).ready(function(){
         function set_main_video(that){
                 var video_id = $(that).parent().attr('video_id');
                 $.ajax({
-                        url: '/2014/admin/setmainvideo/set_main_video/',
+                        url: '/admin/setmainvideo/set_main_video/',
                         dataType: 'html',
                         type: 'POST',
                         data: {video_id: video_id},
@@ -51,7 +51,7 @@ $(document).ready(function(){
 
         function remove_main_video(that){
                 $.ajax({
-                        url: '/2014/admin/setmainvideo/remove_main_video/',
+                        url: '/admin/setmainvideo/remove_main_video/',
                         dataType: 'html',
                         type: 'POST',
                         //data: {param: params},

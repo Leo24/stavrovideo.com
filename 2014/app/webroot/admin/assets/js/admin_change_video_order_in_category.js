@@ -22,7 +22,7 @@ $(document).ready(function(){
             reOrderedVideos.push(reOrderedVideo);
         });
         $.ajax({
-            url: '/2014/admin/videocategories/change_video_order_in_category/',
+            url: '/admin/videocategories/change_video_order_in_category/',
             dataType: 'html',
             type: 'POST',
             data: {reOrderedVideos: reOrderedVideos },

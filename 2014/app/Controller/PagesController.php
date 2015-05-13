@@ -35,7 +35,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Video', 'Category', 'Gb', 'VideoCategories');
+	public $uses = array('Video', 'Category', 'Gb', 'VideoCategories', 'ContactUsInfo');
 
 /**
  * Displays a view
@@ -45,18 +45,19 @@ class PagesController extends AppController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function display() {
-	       
-	        $pagefeed = $this->Facebook->api("/StavroVideoProductions/feed");
-                
-                $this->set('pagefeed', $pagefeed);
-		        $this->set('categories', $this->Category->find('all'));
-                $this->set('videos', $this->Video->find('all'));
+	public function display()
+    {
+
+        $pagefeed = $this->Facebook->api("/StavroVideoProductions/feed");
+
+        $this->set('pagefeed', $pagefeed);
+        $this->set('categories', $this->Category->find('all'));
+        $this->set('videos', $this->Video->find('all'));
 //                $this->set('video_about', $this->Video->find('first', array('conditions' => array('category_id' => -2) )));
 
-                $this->set('video_main', $this->Video->find('all', array('conditions' => array('main_site_video' => 1))));
-                $this->set('comments', $this->Gb->find('all', array('conditions' => array('approved' => 1) )));
-
+        $this->set('video_main', $this->Video->find('all', array('conditions' => array('main_site_video' => 1))));
+        $this->set('comments', $this->Gb->find('all', array('conditions' => array('approved' => 1))));
+        $this->set('contacts', $this->ContactUsInfo->find('all'));
     }
 
 

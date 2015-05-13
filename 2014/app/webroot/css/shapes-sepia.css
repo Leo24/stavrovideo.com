@@ -2264,7 +2264,7 @@ a.btn-theme:focus{
 
 #main-nav.scrolled .navbar-header2 a {
         float: left;
-        margin-left: -15px;
+        /*margin-left: -15px;*/
 }
 
 #main-nav.scrolled .navbar-header2 a img {
@@ -2376,6 +2376,7 @@ a.btn-theme:focus{
 }
 .search-results-container h2 {
     text-align: center;
+    margin-top: 35px;
 }
 
 

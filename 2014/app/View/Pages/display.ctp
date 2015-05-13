@@ -26,7 +26,7 @@
                                                 </div>
                                                 
                                                 <div class="we_are_num">
-                                                        <a href="#contact" class="scrollto">818. 298.8489</a>
+                                                        <a href="#contact" class="scrollto"><? if(isset($contacts[0]['ContactUsInfo']['mobile_phone_number'])){ echo $contacts[0]['ContactUsInfo']['mobile_phone_number'];} ?></a>
                                                 </div>    
                                         </div>                                                                            
                                 </div>
@@ -413,9 +413,9 @@
 						<div class="scrollimation scale-in">
 						<h3 class="primary">Find Us</h3>
 							<ul class="address">
-								<li>We are available 7 days a week</li>
-								<li><span><i class="fa fa-mobile-phone fa-fw"></i></span>818.298.8489</li>
-                                                                <li><span><i class="fa fa-phone fa-fw"></i></span>818.780.3777</li>                                                                        
+								<li><? if(isset($contacts[0]['ContactUsInfo']['additional_text'])){ echo $contacts[0]['ContactUsInfo']['additional_text'];} ?></li>
+								<li><span><i class="fa fa-mobile-phone fa-fw"></i></span><? if(isset($contacts[0]['ContactUsInfo']['mobile_phone_number'])){ echo $contacts[0]['ContactUsInfo']['mobile_phone_number'];} ?></li>
+                                                                <li><span><i class="fa fa-phone fa-fw"></i></span><? if(isset($contacts[0]['ContactUsInfo']['landline_phone_number'])){ echo $contacts[0]['ContactUsInfo']['landline_phone_number'];} ?></li>
 							</ul>
 						</div>
 						

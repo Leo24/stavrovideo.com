@@ -497,7 +497,7 @@ $(document).ready(function() {
 	function getCategoryVideos(that){
 		var category_id = $(that).attr('category-id');
 		$.ajax({
-			url: '/2014/pages/list_category_videos/',
+			url: '/pages/list_category_videos/',
 			dataType: 'html',
 			type: 'POST',
 			data: {category_id: category_id},

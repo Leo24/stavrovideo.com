@@ -26,7 +26,7 @@ $(document).ready(function(){
         
         function loadVideo(page) {
                 $.ajax({
-        		url: '/2014/admin/videos/get_video_ajax/'+page,
+        		url: '/admin/videos/get_video_ajax/'+page,
         		dataType: 'html',
         		type: 'GET',
                         //data: params,
@@ -47,7 +47,7 @@ $(document).ready(function(){
         		}
         	});
         }
-        
+
         function changeVideoCategory(video, category_id, self) {
                 var line_id, attr;
                 $(self).children().each(function(){
@@ -60,7 +60,7 @@ $(document).ready(function(){
                         line_id = 0;
                 }
                 $.ajax({
-        		url: '/2014/admin/videos/change_video_category/'+video,
+        		url: '/admin/videos/change_video_category/'+video,
         		dataType: 'html',
         		type: 'POST',
                         data: { category_id: category_id,
@@ -87,10 +87,10 @@ $(document).ready(function(){
         		}
         	});
         }
-        
+
         function changeVideoOrder(video, order) {
                 $.ajax({
-        		url: '/2014/admin/videos/change_video_order/'+video,
+        		url: '/admin/videos/change_video_order/'+video,
         		dataType: 'html',
         		type: 'POST',
                         data: {order: order},
@@ -114,10 +114,10 @@ $(document).ready(function(){
         		}
         	});
         }
-        
+
         function changeVideoStart(video, checked) {
                 $.ajax({
-        		url: '/2014/admin/videos/change_video_start/'+video,
+        		url: '/admin/videos/change_video_start/'+video,
         		dataType: 'html',
         		type: 'POST',
                         data: {checked: checked},
@@ -145,7 +145,7 @@ $(document).ready(function(){
 
         function addCategory(video){
                 $.ajax({
-                        url: '/2014/admin/videos/get_list_categories/'+video,
+                        url: '/admin/videos/get_list_categories/'+video,
                         dataType: 'html',
                         type: 'POST',
                         data: {},
@@ -198,7 +198,7 @@ $(document).ready(function(){
                         line_id = 0;
                 }
                 $.ajax({
-                        url: '/2014/admin/videos/remove_video_category/'+video,
+                        url: '/admin/videos/remove_video_category/'+video,
                         dataType: 'html',
                         type: 'POST',
                         data: { line_id: line_id },

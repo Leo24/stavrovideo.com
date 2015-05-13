@@ -127,6 +127,12 @@
             </div>
           </div>
 
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle b_F79999" href="<?=$this->webroot?>admin/feedback/contactinfo_index"><i class="icon-lock"></i> <span>Set Contact Us Info</span></a>
+            </div>
+          </div>
+
         </div>
       </div>
       <!-- /Side menu -->

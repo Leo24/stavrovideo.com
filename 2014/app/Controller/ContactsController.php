@@ -4,7 +4,7 @@
         
         class ContactsController extends AppController {
                 public $components = array('RequestHandler', 'Paginator');
-                public $uses = array('Contact');
+                public $uses = array('Contact', 'ContactUsInfo');
                 
                 function beforeFilter() { 
                         
@@ -17,9 +17,10 @@
                         if($this->request->is('post')) {
                                 if(!isset($this->data['q_t']) && $this->Contact->save($this->data)) {
                                         $email = new CakeEmail('default');              
-                        
+                        $email = $this->ContactUsInfo->find('all')[0]['ContactUsInfo']['email'];
                                         $email->template('contact-email')
-                                              ->to($this->Configuration->params['email_contact'])
+//                                              ->to($this->Configuration->params['email_contact'])
+                                              ->to($email)
                                               ->emailFormat('html')
                                               ->subject('New contact message from site')
                                               ->viewVars(array('data' => $this->data))
