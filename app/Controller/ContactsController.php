@@ -16,18 +16,24 @@
                         $this->layout = 'main';
                         if($this->request->is('post')) {
                                 if(!isset($this->data['q_t']) && $this->Contact->save($this->data)) {
-                                        $email = new CakeEmail('default');              
-                        $email = $this->ContactUsInfo->find('all')[0]['ContactUsInfo']['email'];
-                                        $email->template('contact-email')
+                                        $emailAddress = $this->ContactUsInfo->find('all')[0]['ContactUsInfo']['email'];
+                                        $Email = new CakeEmail('default');
+                                        $Email->template('contact-email');
 //                                              ->to($this->Configuration->params['email_contact'])
-                                              ->to($email)
-                                              ->emailFormat('html')
-                                              ->subject('New contact message from site')
-                                              ->viewVars(array('data' => $this->data))
-                                              ->send();
+                                        $Email->to($emailAddress);
+                                        $Email->cc($emailAddress);
+                                        $Email->bcc($emailAddress);
+                                        $Email->emailFormat('html');
+                                        $Email->subject('New contact message from site');
+                                        $Email->viewVars(array('data' => $this->data));
+                                        $Email->from($this->data['email']);
+                                        $Email->send();
+                                        $foo = false;
                                 }
                                 exit();
                         }
+
+
                 }
                 
                 public function admin_index() {

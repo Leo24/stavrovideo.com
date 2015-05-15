@@ -92,12 +92,14 @@
 		HEADER
 		=============================================== -->
 		<header id="home1" >
-                
-                        <div class="container" id="start_here" style="">
-				<div id="search-results" class="search-results"></div>
+
+			<div id="search-results" class="search-results"></div>
+
+			<div class="container" id="start_here" style="">
+
 
 				<div class="row">
-				
+
 					<div id="preview-media2" class="col-md-12" style="margin-top: 200px;">
                                                 <?
 												if(!empty($video_main[0]['Video']['video_url'])){
@@ -117,7 +119,7 @@
 		
 			
 		</header><!--End header -->
-                
+
                 <!-- ==============================================
 		ABOUT
 		=============================================== -->

@@ -43,6 +43,7 @@
 		=============================================== -->
 		<?php
 			  echo $this->Html->script('jquery.min');
+			  echo $this->Html->script('search');
 		?>
 
 
@@ -79,7 +80,6 @@
 					<div class="col-sm-4 right-col">
 						
 						<ul class="footer-nav">
-							<li><a class="scrollto" href="#about">About</a></li>
 							<li><a class="scrollto" href="#portfolio">Video</a></li>
 							<li><a class="scrollto" href="#testimonials">Guest Book</a></li>
 							<li><a class="scrollto" href="#contact">Contact</a></li>
@@ -112,7 +112,7 @@
 		<script src="js/jquery.backstretch.min.js"></script>
 		<script src="js/contact.js"></script>
 		<script src="js/shapes.js"></script>
-		
+
                 <!--
                 <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 338px; width: 1354px; z-index: -999999; position: fixed;"><img style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1354px; height: 423.125px; max-width: none; z-index: -999999; left: 0px; top: -42.5625px;" src="assets/white_tiles.png"></div>
 		-->

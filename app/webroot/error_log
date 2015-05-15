@@ -29,5 +29,3 @@
 [21-Dec-2014 00:58:17] PHP Fatal error:  Call to a member function getVimeVideo() on a non-object in /home2/stavrovi/public_html/2014/app/Controller/ContactsController.php on line 35
 [21-Dec-2014 00:59:20] PHP Parse error:  syntax error, unexpected ')' in /home2/stavrovi/public_html/2014/app/Controller/ContactsController.php on line 35
 [21-Dec-2014 07:35:22] PHP Parse error:  syntax error, unexpected T_ELSE in /home2/stavrovi/public_html/2014/app/View/Gb/admin_index.ctp on line 53
-[30-Apr-2015 10:02:18] PHP Fatal error:  Cannot use object of type stdClass as array in /home2/stavrovi/public_html/2014/app/View/Elements/video.ctp on line 18
-[05-May-2015 02:57:39] PHP Fatal error:  Class 'phpVimeo' not found in /home2/stavrovi/public_html/2014/app/Model/Video.php on line 49

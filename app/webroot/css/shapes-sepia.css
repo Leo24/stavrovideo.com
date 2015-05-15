@@ -852,7 +852,7 @@ a.btn-theme:focus{
     position:relative;
     width:200px;
     float: left;
-    min-height: 295px;
+    /*min-height: 295px;*/
     border:1px solid #e5e5e5;
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
@@ -2363,10 +2363,17 @@ a.btn-theme:focus{
 
 .search-results-container{
     margin-top: 200px;
-    margin-bottom: -200px;
+    margin-bottom: -170px;
     display: table;
     width: 100%;
 }
+
+.search-results-container-wrapper{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
 .search-results-container ul {
     list-style-type: none;
 }
@@ -2374,6 +2381,11 @@ a.btn-theme:focus{
     margin: 0 6px;
     float: left;
 }
+
+.search-results-container li:last-child {
+    margin: 0 6px 27px 6px;
+}
+
 .search-results-container h2 {
     text-align: center;
     margin-top: 35px;
@@ -2421,6 +2433,11 @@ a.btn-theme:focus{
     color: #000000;
 }
 
+#search-results{
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+}
+
 .search-results-container .video-from-search-backing{
     position: absolute;
     left: 0;
@@ -2449,9 +2466,9 @@ a.btn-theme:focus{
     height: 100%;
 }
 .search-results-container .close-search-results{
-    /*position:absolute;*/
-    /*top:0;*/
-    /*right:0;*/
+    position: absolute;
+    top: 190px;
+    right: 3px;
     float: right;
     font-size:24px;
     line-height:34px;
@@ -2463,5 +2480,9 @@ a.btn-theme:focus{
     transform:scale(1);
     -webkit-transition:-webkit-transform .2s ease-out;
     transition:transform .2s ease-out;
+}
+.no-videos-found{
+    font-weight: bold;
+
 }
 

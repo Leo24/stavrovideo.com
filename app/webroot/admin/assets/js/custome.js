@@ -47,7 +47,7 @@ $(document).ready(function(){
         		}
         	});
         }
-
+        
         function changeVideoCategory(video, category_id, self) {
                 var line_id, attr;
                 $(self).children().each(function(){
@@ -87,7 +87,7 @@ $(document).ready(function(){
         		}
         	});
         }
-
+        
         function changeVideoOrder(video, order) {
                 $.ajax({
         		url: '/admin/videos/change_video_order/'+video,
@@ -114,7 +114,7 @@ $(document).ready(function(){
         		}
         	});
         }
-
+        
         function changeVideoStart(video, checked) {
                 $.ajax({
         		url: '/admin/videos/change_video_start/'+video,

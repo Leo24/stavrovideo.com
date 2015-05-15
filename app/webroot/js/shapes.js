@@ -583,14 +583,12 @@ $(document).ready(function() {
 		$('.search-results-container').css('display', 'none');
 	});
 
-	$(document).on('click', '.video-from-search-backing .close-preview', function(){
+	$(document).on('click', '.search-results-container .close-search-results', function(){
 		$('.video-from-search-backing').slideUp(500);
 		$('.video-from-search').slideUp(500);
-
-	});
-	$(document).on('click', '.search-results-container .close-search-results', function(){
+		$('.video-from-search-backing .play.rounded-box.state-paused').click();
 		$('#search-results').slideUp(500);
-	});
 
+	});
 
 });	
