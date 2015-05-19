@@ -6,14 +6,13 @@ $(document).ready(function(){
                 return false;
         }).on("click", ".add-category .add-category", function(){
                 addCategory($(this).parents('tr').data('id'));
-        }).on('change', 'select.category-video', function(){
+        }).on("change", "select.category-video", function(){
                 var self = this;
                 changeVideoCategory($(this).parents('tr').data('id'), $(this).find(':selected').attr('value'), self);
                 }).on("click", ".select-category .remove-category", function(){
                 var self = this;
                 removeCategory($(this).parents('tr').data('id'), self);
             });
-
 
 
         //    on('change', '#category-video', function() {

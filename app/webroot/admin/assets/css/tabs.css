@@ -291,3 +291,40 @@ ol#toc  .category.content.active .video-container-for-main-video li.main-video-c
     font-family: Roboto, sans-serif;
     font-weight: bold;
 }
+
+#mceu_13{
+    margin-left: 14px;
+}
+
+.search-for-video .submit-button{
+    width: 75px;
+    margin-bottom: 11px;
+    line-height: 24px;
+    background: #5D97BD;
+    font-family: Roboto, sans-serif;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.pre-search-list{
+
+}
+
+.pre-search-list ul{
+    display: block;
+    width: 700px;
+    height: auto;
+    border: #CCCCCC solid 1px;
+    padding-left: 23px;
+    margin-left: 0;
+    list-style: none;
+}
+
+.pre-search-list ul li{
+    margin: 20px 0;
+}
+
+.pre-search-list ul li:hover{
+   cursor: pointer;
+}
+

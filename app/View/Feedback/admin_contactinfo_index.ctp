@@ -22,15 +22,16 @@
                                                 <label class="control-label">Email</label>
                                                 <div class="controls"><input type="text" name="data[ContactUsInfo][email]"  value="<? if(isset($contacts[0]['ContactUsInfo']['mobile_phone_number'])){ echo $contacts[0]['ContactUsInfo']['email'];}?>"></div>
                                         </div>
-<!--                                        <div class="control-group ">-->
-<!--                                                <label class="control-label">Address:</label>-->
-<!--                                                <div class="controls"><input type="text" name="data[ContactUsInfo][address]" value="<? if(isset($contacts[0]['ContactUsInfo']['mobile_phone_number'])){ echo $contacts[0]['ContactUsInfo']['address'];}?>"></div>-->
-<!--                                        </div>-->
-<!--                                        <div class="control-group ">-->
-<!--                                                <label class="control-label">Postcode</label>-->
-<!--                                                <div class="controls"><input type="text" name="data[ContactUsInfo][postcode]" value="<? if(isset($contacts[0]['ContactUsInfo']['mobile_phone_number'])){ echo $contacts[0]['ContactUsInfo']['postcode'];}?>"></div>-->
-<!--                                        </div>-->
-
+                                        <div class="control-group ">
+                                                <label class="control-label">Thank You Message Subject:</label>
+                                                <div class="controls thank-you-message"><input type="text" name="data[ContactUsInfo][message_subject]" value="<? if(isset($contacts[0]['ContactUsInfo']['message_subject'])){ echo $contacts[0]['ContactUsInfo']['message_subject'];}?>"></div>
+                                        </div>
+                                        <div class="control-group ">
+                                                <label class="control-label">Thank You Message Body:</label>
+                                                <div class="controls">
+                                                    <textarea name="data[ContactUsInfo][message_body]" cols="40" rows="3"><? if(isset($contacts[0]['ContactUsInfo']['message_body'])){ echo $contacts[0]['ContactUsInfo']['message_body'];}?></textarea>
+                                                </div>
+                                         </div>
                                 </div>
                         </div>
                         <div class="widget-footer">

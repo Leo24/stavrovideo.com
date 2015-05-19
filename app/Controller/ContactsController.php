@@ -16,19 +16,20 @@
                         $this->layout = 'main';
                         if($this->request->is('post')) {
                                 if(!isset($this->data['q_t']) && $this->Contact->save($this->data)) {
-                                        $emailAddress = $this->ContactUsInfo->find('all')[0]['ContactUsInfo']['email'];
+                                        $ContactUsInfo = $this->ContactUsInfo->find('all');
+                                        $sendTo = $ContactUsInfo[0]['ContactUsInfo']['email'];
+
                                         $Email = new CakeEmail('default');
                                         $Email->template('contact-email');
 //                                              ->to($this->Configuration->params['email_contact'])
-                                        $Email->to($emailAddress);
-                                        $Email->cc($emailAddress);
-                                        $Email->bcc($emailAddress);
+                                        $Email->to($sendTo);
                                         $Email->emailFormat('html');
                                         $Email->subject('New contact message from site');
                                         $Email->viewVars(array('data' => $this->data));
-                                        $Email->from($this->data['email']);
+//                                        $Email->from($this->data['email']);
+                                        $Email->from($sendTo);
                                         $Email->send();
-                                        $foo = false;
+
                                 }
                                 exit();
                         }
@@ -53,6 +54,26 @@
                         $this->redirect(array('controller' => 'contacts', 'action' => 'index', 'prefix' => 'admin'));
                         exit();
                 }
+
+public function sendThankYouMessage(){
+
+        $ContactUsInfo = $this->ContactUsInfo->find('all');
+        $sendTo = $ContactUsInfo[0]['ContactUsInfo']['email'];
+        $subject = $ContactUsInfo[0]['ContactUsInfo']['message_subject'];
+        $message = $ContactUsInfo[0]['ContactUsInfo']['message_body'];
+
+        $Email = new CakeEmail('default');
+        $Email->template('thankyou');
+        $Email->to($this->data['email']);
+        $Email->emailFormat('html');
+        $Email->subject($subject);
+//        $Email->viewVars($message);
+        $Email->from($sendTo);
+        $Email->send($message);
+
+
+
+}
 
         }
 ?>

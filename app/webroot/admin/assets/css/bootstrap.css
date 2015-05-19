@@ -1947,9 +1947,9 @@ legend + .control-group {
 }
 .form-horizontal .control-label {
   float: left;
-  width: 165px;
+  width: 195px;
   padding-top: 5px;
-  text-align: right;
+  text-align: left;
 }
 .form-horizontal .controls {
   *display: inline-block;

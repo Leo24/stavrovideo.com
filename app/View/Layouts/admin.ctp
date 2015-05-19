@@ -93,6 +93,12 @@
 
           <div class="accordion-group">
             <div class="accordion-heading">
+              <a class="accordion-toggle b_F79999" href="<?=$this->webroot?>admin/videoSearch/"><i class="icon-film"></i> <span>Vimeo Search</span></a>
+            </div>
+          </div>
+
+          <div class="accordion-group">
+            <div class="accordion-heading">
               <a class="accordion-toggle b_F79999" href="<?=$this->webroot?>admin/categories/"><i class="icon-folder-close-alt"></i> <span>Categories</span></a>
             </div>
           </div>
@@ -184,7 +190,19 @@
     <script type="text/javascript" src="<?=$this->webroot?>admin/assets/js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
     <script type="text/javascript" src="<?=$this->webroot?>admin/assets/js/admin_change_video_order_in_category.js"></script>
     <script type="text/javascript" src="<?=$this->webroot?>admin/assets/js/admin_set_main_site_video.js"></script>
-<!--    <script type="text/javascript" src="--><?//=$this->webroot?><!--admin/assets/js/Imtech_SearchOnThisPage.js"></script>-->
+    <script type="text/javascript" src="<?=$this->webroot?>admin/assets/js/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript" src="<?=$this->webroot?>admin/assets/js/tinymce/js/tinymce/jquery.tinymce.min.js"></script>
+      <script type="text/javascript">
+        tinymce.init({
+          selector: "textarea",
+          browser_spellcheck : true,
+          width : 400,
+          height : 200,
+          fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt"
+        });
+      </script>
+
+      <!--    <script type="text/javascript" src="--><?//=$this->webroot?><!--admin/assets/js/Imtech_SearchOnThisPage.js"></script>-->
 
   </body>
 </html>

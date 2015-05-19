@@ -4,7 +4,6 @@
         class FeedbackController extends AppController {
                 public $uses = array('ContactUsInfo');
 
-
                 public function admin_contactinfo_index() {
                         $this->layout = 'admin';
                         $this->set('contacts',  $this->ContactUsInfo->find('all'));
@@ -23,6 +22,8 @@
                                 $this->ContactUsInfo->set('mobile_phone_number', $this->data['ContactUsInfo']['mobile_phone_number']);
                                 $this->ContactUsInfo->set('landline_phone_number', $this->data['ContactUsInfo']['landline_phone_number']);
                                 $this->ContactUsInfo->set('email', $this->data['ContactUsInfo']['email']);
+                                $this->ContactUsInfo->set('message_subject', $this->data['ContactUsInfo']['message_subject']);
+                                $this->ContactUsInfo->set('message_body', $this->data['ContactUsInfo']['message_body']);
                                 $this->ContactUsInfo->save();
 
                                 $result = true;

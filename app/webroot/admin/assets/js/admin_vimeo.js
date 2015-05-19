@@ -14,7 +14,16 @@ $(document).ready(function(){
                 removeCategory($(this).parents('tr').data('id'), self);
         }).on("click", ".update-video-list form input", function(){
                     updateVideoList(this);
+        }).on("keyup", ".widget-body .search-for-video input.search", function(){
+                var self = this;
+                findVideo(self);
         });
+            //.on("click",".pre-search-list .search-list li", function(){
+            //    var self = this;
+            //    getSingleVideo(self);
+        //});
+
+
 
 
 
@@ -259,6 +268,86 @@ $(document).ready(function(){
                 });
         }
 
+
+
+        function findVideo(self){
+                var searchQuery= $(self).attr('value');
+                if(searchQuery.length > 2){
+                        $.ajax({
+                                url: 'http://stavrovideo.com/admin/videoSearch/preSearchList',
+                                dataType: 'html',
+                                type: 'POST',
+                                data: { searchQuery: searchQuery },
+                                success: function(data)
+
+                                {
+
+                                        data = $.parseJSON(data);
+                                        $(self).parents().eq(1).find('.pre-search-list').children().remove();
+                                        var preSearchResultTemplate = [];
+
+                                        var searchResults = data[0], searchResult;
+                                        var length = searchResults.length;
+                                        if(length == 0){
+                                                preSearchResultTemplate.push(
+                                                    '<li><span>No Videos for "'+searchQuery+'"</span></li>');
+
+                                        }else{
+                                                for(var i = 0; i < length; i++){
+                                                        searchResult = searchResults[i];
+                                                        preSearchResultTemplate.push(
+                                                            '<li video_id = "'+searchResult.video_id+'"><span><a href="http://stavrovideo.com/admin/videoSearch/getSingleVideo/video/'+searchResult.video_id+'">'+searchResult.video_name+'</a></span></li>');
+                                                }
+                                        }
+
+
+                                        preSearchResultTemplate = preSearchResultTemplate.slice().join().replace(/,/g , " ");
+                                        $(self).parents().eq(1).find('.pre-search-list').append('<ul class="search-list">'+preSearchResultTemplate+'</ul>');
+
+                                },
+                                error: function(XMLHttpRequest, textStatus, errorThrown){
+                                //        $('#video_body').css('opacity', '1.0');
+                                //        $(that).show();
+                                //        $('#light').css('display', 'none');
+                                //        $('#fade').css('display', 'none');
+                                //        //$(that).parents().eq(1).find('.update-video-list-load').css('display', 'none');
+                                //        alertify.log( 'There is some error', 'error' );
+                                }
+                        });
+
+                }else{
+                        $(self).parents().eq(1).find('.pre-search-list').children().remove();
+                }
+
+                //return false;
+        }
+
+        function getSingleVideo(self){
+            var video_id = $(self).attr('video_id');
+                $.ajax({
+                        url: 'getSingleVideo',
+                        dataType: 'html',
+                        type: 'POST',
+                        data: { video_id: video_id},
+                        success: function(data)
+
+                        {
+
+                                data = $.parseJSON(data);
+
+
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown){
+                                //        $('#video_body').css('opacity', '1.0');
+                                //        $(that).show();
+                                //        $('#light').css('display', 'none');
+                                //        $('#fade').css('display', 'none');
+                                //        //$(that).parents().eq(1).find('.update-video-list-load').css('display', 'none');
+                                //        alertify.log( 'There is some error', 'error' );
+                        }
+                });
+
+        }
 
 
 });
